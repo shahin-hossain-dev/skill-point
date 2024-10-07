@@ -8,7 +8,7 @@ const Banner = () => {
       {/* ------------banner title------------ */}
       <div className="absolute top-1/2 -translate-y-1/2 lg:-translate-y-2/3 left-8 lg:left-14">
         <h1
-          style={{ "line-height": "1.2" }}
+          style={{ lineHeight: "1.2" }}
           className="text-2xl md:text-4xl  lg:text-5xl font-bold text-secondary-color"
         >
           {" "}
