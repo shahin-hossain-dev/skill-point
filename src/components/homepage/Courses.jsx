@@ -44,7 +44,7 @@ const Courses = () => {
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
-            className={"my-3"}
+            className={"py-5"}
           >
             {courses.map((course) => (
               <SwiperSlide key={course.id}>

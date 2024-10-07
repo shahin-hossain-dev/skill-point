@@ -13,12 +13,18 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { FaRegUser } from "react-icons/fa";
 import { Button } from "./ui/button";
+import { IoMdTime } from "react-icons/io";
+
 const CourseCard = ({ course }) => {
   const { id, title, description, duration, price, enrolled, rating, imgURL } =
     course;
   return (
-    <Card className="shadow-lg min-h-full">
-      <CardHeader>
+    <Card className="shadow-lg min-h-full hover:border hover:border-primary-color duration-300">
+      <CardHeader className="relative">
+        <div className="flex gap-2 items-center text-sm absolute top-8 right-6 bg-white rounded-sm px-2 ">
+          <IoMdTime />
+          <span>{`${duration.hour}h, ${duration.minute}min`}</span>
+        </div>
         <Image
           src={imgURL}
           alt={title}
