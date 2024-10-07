@@ -1,4 +1,4 @@
-import Homepage from "@/components/Homepage";
+import Homepage from "@/components/homepage/Homepage";
 import Navbar from "@/components/shared/Navbar";
 
 export default function Home() {

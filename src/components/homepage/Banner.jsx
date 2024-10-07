@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 const Banner = () => {
   return (
-    <div className="-mt-4 relative -z-10">
+    <div className="-mt-4 relative">
       {/* ------------banner title------------ */}
       <div className="absolute top-1/2 -translate-y-1/2 lg:-translate-y-2/3 left-8 lg:left-14">
         <h1
@@ -16,7 +16,7 @@ const Banner = () => {
           for Better <span className="text-primary-color">Future</span>{" "}
         </h1>
         <Button className=" text-primary-color mt-4 bg-transparent border border-primary-color hover:bg-primary-color hover:text-white">
-          Explore Now
+          Get Started
         </Button>
       </div>
       {/*----------- banner image----------------*/}
@@ -25,6 +25,7 @@ const Banner = () => {
         width={1900}
         height={600}
         alt="banner image"
+        className="-z-10 relative"
       />
     </div>
   );
