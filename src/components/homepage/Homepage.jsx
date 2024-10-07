@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import Courses from "./Courses";
 import OurServices from "./OurServices";
 
 const Homepage = () => {
@@ -7,6 +8,7 @@ const Homepage = () => {
       <Banner />
       <div className="md:w-[80%] w-[90%] mx-auto">
         <OurServices />
+        <Courses />
       </div>
     </div>
   );
