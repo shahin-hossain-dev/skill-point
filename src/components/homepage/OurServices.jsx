@@ -14,7 +14,7 @@ const OurServices = () => {
       <div>
         <div className="flex gap-5 flex-col justify-between md:flex-row mt-4 lg:mt-6">
           {services.map((service, idx) => (
-            <div key={idx}>
+            <div key={idx} className="flex-1">
               <div className="p-5 rounded-md hover:bg-primary-color hover:text-white shadow-2xl ">
                 <div className="flex gap-3 items-center">
                   <div className="w-[30px] h-[30px]  flex justify-center items-center rounded-md  bg-white">
@@ -52,11 +52,13 @@ const services = [
   {
     image: "/assets/icons/icon-2.png",
     title: "Web Development",
-    description: "Lessons on design that cover the most recent developments.",
+    description:
+      "Classes in development that cover the most recent advancements in web.",
   },
   {
     image: "/assets/icons/icon-3.png",
     title: "Digital Marketing",
-    description: "Lessons on design that cover the most recent developments.",
+    description:
+      "Marketing courses that cover the most recent marketing trends.",
   },
 ];
