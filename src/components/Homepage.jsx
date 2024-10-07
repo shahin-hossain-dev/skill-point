@@ -1,12 +1,9 @@
-import { Button } from "@/components/ui/button";
+import Banner from "./Banner";
 
 const Homepage = () => {
   return (
     <div>
-      <h2>Home Page</h2>
-      <Button className="bg-primary-color text-white hover:bg-secondary-color">
-        Click Me
-      </Button>
+      <Banner />
     </div>
   );
 };

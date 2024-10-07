@@ -21,7 +21,7 @@ const Navbar = () => {
 
   console.log(isToggleBarOpen);
   return (
-    <nav className="mx-2 md:mx-8 py-3">
+    <nav className="mx-2 md:mx-8 py-3 sticky">
       <div className="flex justify-between">
         {/* logo */}
         <h2 className="text-primary-color text-3xl font-bold ">
@@ -98,12 +98,11 @@ const Navbar = () => {
             </button>
             {/* Sidebar nav item */}
             <div
-              className={` right-0 p-5 w-[200px] shadow-2xl min-h-full rounded-l-lg  fixed ease-out transition-transform ${
+              className={`bg-white right-0 p-5 w-[200px] shadow-2xl min-h-full rounded-l-lg  fixed ease-out transition-transform ${
                 isToggleBarOpen ? "translate-x-0" : "translate-x-full"
               } duration-300`}
             >
-              {/* small screen side bar */}
-              <div className="lg:hidden font-medium">
+              <div className="lg:hidden font-medium ">
                 <NavigationMenu>
                   <NavigationMenuList className="flex items-start flex-col w-full gap-3">
                     {/* nav-item-1 */}
