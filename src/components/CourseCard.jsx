@@ -19,7 +19,7 @@ const CourseCard = ({ course }) => {
   const { id, title, description, duration, price, enrolled, rating, imgURL } =
     course;
   return (
-    <Card className="shadow-lg min-h-full hover:border hover:border-primary-color duration-300">
+    <Card className="shadow-lg min-h-full h-full hover:border hover:border-primary-color duration-300">
       <CardHeader className="relative">
         <div className="flex gap-2 items-center text-sm absolute top-8 right-6 bg-white rounded-sm px-2 ">
           <IoMdTime />
