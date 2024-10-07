@@ -28,7 +28,7 @@ const Navbar = () => {
           <span className="text-secondary-color">Skill</span> Point
         </h2>
         {/* nav manu */}
-        <div className="sm:hidden lg:block">
+        <div className="hidden lg:block text-lg">
           <NavigationMenu>
             <NavigationMenuList>
               {/* nav-item-1 */}
@@ -74,82 +74,73 @@ const Navbar = () => {
         {/* nav end */}
         <div className="flex gap-3">
           <Button className="bg-outline relative hover:bg-ghost text-secondary-color">
-            <p className="h-6 w-6 absolute -top-1 right-0 border-2 flex justify-center items-center border-white rounded-full bg-primary-color text-white">
+            <p className="h-6 w-6 absolute -top-1 right-0 border-2 flex justify-center items-center text-[12px] border-white rounded-full bg-primary-color text-white">
               2
             </p>
             <MdOutlineShoppingCart className="text-2xl" />
           </Button>
-          <Button className="bg-primary-color sm:hidden text-white hover:bg-[#9E77ED]">
+          <Button className="bg-primary-color hidden lg:block text-white hover:bg-[#9E77ED]">
             Sign In
           </Button>
-          <Button className="bg-primary-color sm:hidden text-white hover:bg-[#9E77ED]">
+          <Button
+            variant="outline"
+            className=" text-primary-color hidden lg:block outline-1 outline-primary-color hover:bg-primary-color hover:text-white"
+          >
             Sign Up
           </Button>
           <div className="lg:hidden relative">
             <button onClick={() => setIsToggleBarOpen(!isToggleBarOpen)}>
               {isToggleBarOpen ? (
-                <IoCloseSharp className="text-3xl duration-150" />
+                <IoCloseSharp className="text-3xl duration-150 text-primary-color " />
               ) : (
-                <FaBars className="text-3xl duration-150" />
+                <FaBars className="text-3xl duration-150 text-primary-color" />
               )}
             </button>
             {/* Sidebar nav item */}
             <div
-              className={`bg-primary-color right-0 p-10 rounded-l-lg  fixed ease-out transition-transform ${
+              className={` right-0 p-5 w-[200px] shadow-2xl min-h-full rounded-l-lg  fixed ease-out transition-transform ${
                 isToggleBarOpen ? "translate-x-0" : "translate-x-full"
               } duration-300`}
             >
-              <div className=" lg:block">
+              {/* small screen side bar */}
+              <div className="lg:hidden font-medium">
                 <NavigationMenu>
-                  <NavigationMenuList className="flex flex-col w-full gap-3">
+                  <NavigationMenuList className="flex items-start flex-col w-full gap-3">
                     {/* nav-item-1 */}
                     <NavigationMenuItem>
-                      <Link
-                        href="/"
-                        className={`${navigationMenuTriggerStyle()}`}
-                      >
+                      <Link href="/" className="ps-1">
                         Home
                       </Link>
                     </NavigationMenuItem>
                     {/* nav-item-2 */}
                     <NavigationMenuItem>
-                      <Link href="/courses">
-                        <NavigationMenuTrigger
-                          className={navigationMenuTriggerStyle()}
-                        >
-                          Courses
-                        </NavigationMenuTrigger>
-                      </Link>
+                      <Link href="/courses">Courses</Link>
                     </NavigationMenuItem>
                     {/* nav-item-3 */}
                     <NavigationMenuItem>
-                      <Link
-                        href="/store"
-                        className={`${navigationMenuTriggerStyle()} `}
-                      >
-                        Store
-                      </Link>
+                      <Link href="/store">Store</Link>
                     </NavigationMenuItem>
                     {/* nav-item-4 */}
                     <NavigationMenuItem>
-                      <Link
-                        href="/blog"
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        Blog
-                      </Link>
+                      <Link href="/blog">Blog</Link>
                     </NavigationMenuItem>
                     {/* nav-item-3 */}
                     <NavigationMenuItem>
-                      <Link
-                        href="/components"
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        Components
-                      </Link>
+                      <Link href="/components">Components</Link>
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
+                <div className="mt-3 flex flex-col gap-3">
+                  <Button className="bg-primary-color  text-white hover:bg-[#9E77ED]">
+                    Sign In
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className=" text-primary-color outline-1 outline-primary-color hover:bg-primary-color hover:text-white"
+                  >
+                    Sign Up
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
