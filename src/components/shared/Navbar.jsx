@@ -19,12 +19,11 @@ import { IoCloseSharp } from "react-icons/io5";
 const Navbar = () => {
   const [isToggleBarOpen, setIsToggleBarOpen] = useState(false);
 
-  console.log(isToggleBarOpen);
   return (
-    <nav className="mx-2 md:mx-8 py-3 sticky">
+    <nav className="mx-2 md:mx-8 py-3">
       <div className="flex justify-between">
         {/* logo */}
-        <h2 className="text-primary-color text-3xl font-bold ">
+        <h2 className="text-primary-color text-2xl lg:text-3xl font-bold ">
           <span className="text-secondary-color">Skill</span> Point
         </h2>
         {/* nav manu */}
@@ -88,17 +87,17 @@ const Navbar = () => {
           >
             Sign Up
           </Button>
-          <div className="lg:hidden relative">
+          <div className="lg:hidden relative ">
             <button onClick={() => setIsToggleBarOpen(!isToggleBarOpen)}>
               {isToggleBarOpen ? (
-                <IoCloseSharp className="text-3xl duration-150 text-primary-color " />
+                <IoCloseSharp className="text-2xl duration-150 text-primary-color " />
               ) : (
-                <FaBars className="text-3xl duration-150 text-primary-color" />
+                <FaBars className="text-2xl duration-150 text-primary-color" />
               )}
             </button>
             {/* Sidebar nav item */}
             <div
-              className={`bg-white right-0 p-5 w-[200px] shadow-2xl min-h-full rounded-l-lg  fixed ease-out transition-transform ${
+              className={`bg-white  right-0 p-5 w-[200px] shadow-2xl min-h-full rounded-l-lg  fixed ease-out transition-transform ${
                 isToggleBarOpen ? "translate-x-0" : "translate-x-full"
               } duration-300`}
             >

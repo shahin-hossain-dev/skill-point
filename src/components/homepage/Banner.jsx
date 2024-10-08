@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 const Banner = () => {
   return (
-    <div className="-mt-4 relative">
+    <div className="-mt-4 relative -z-10">
       {/* ------------banner title------------ */}
       <div className="absolute top-1/2 -translate-y-1/2 lg:-translate-y-2/3 left-8 lg:left-14">
         <h1
@@ -25,7 +25,7 @@ const Banner = () => {
         width={1900}
         height={600}
         alt="banner image"
-        className="-z-10 relative"
+        className=" "
       />
     </div>
   );

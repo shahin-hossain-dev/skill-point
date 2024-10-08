@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import Courses from "./Courses";
 import FeqAskQu from "./FeqAskQu";
+import GetInTouch from "./GetInTouch";
 import OurServices from "./OurServices";
 import Teachers from "./Teachers";
 
@@ -17,6 +18,7 @@ const Homepage = () => {
       </div>
       <div className="md:w-[80%] w-[90%] mx-auto ">
         <FeqAskQu />
+        <GetInTouch />
       </div>
     </div>
   );
